@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-components-services';
   mainTitle = 'hello world';
-}
+
+
+  clickButton(text: string) {
+    console.log(`Text from outher component: ${text}`);
+  }
+
+} 

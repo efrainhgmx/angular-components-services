@@ -1,2 +1,2 @@
 <input type="text" [(ngModel)]="mainTitle">
-<app-img [text]="mainTitle"></app-img>
+<app-img (imgClick)="clickButton($event)" [text]="mainTitle"></app-img>

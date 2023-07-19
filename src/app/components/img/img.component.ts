@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-img',
@@ -7,4 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class ImgComponent {
  @Input() text:string  = 'Nothing to see here yet';
+ @Output() imgClick = new EventEmitter<string>();
+
+
+ onClick( img:string ){
+   this.imgClick.emit(img);
+  } 
+
 }
